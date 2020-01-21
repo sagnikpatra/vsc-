@@ -1,0 +1,29 @@
+using System;
+
+namespace C_sharp_basics
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter 2 highest marks obtained in CA out of 30");
+            double caMarks1 = int.Parse(Console.ReadLine());
+            double caMarks2 = int.Parse(Console.ReadLine());
+            double caMarkscomb = ((caMarks1 + caMarks2) / 60) *25;
+
+            Console.WriteLine("Enter marks obtained in Midterm out of 40");
+            double midTerm = int.Parse(Console.ReadLine());
+            double midTermcomb = (midTerm / 40) * 20;
+
+            Console.WriteLine("Enter marks obtained in EndTerm out of 70");
+            double endtermMarks = int.Parse(Console.ReadLine());
+            double endTermTotal = (endtermMarks / 70) * (50);
+
+            Console.WriteLine("Enter marks obtained in Attendence out of 5");
+            double attendence = int.Parse(Console.ReadLine());
+
+            double totalMarks = ((caMarkscomb + midTermcomb + endTermTotal + attendence) / 10);
+            Console.WriteLine("CGPA" + totalMarks);
+            }
+    }
+}
