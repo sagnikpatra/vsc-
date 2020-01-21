@@ -1,0 +1,55 @@
+//employeecs.cs
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace C_sharp_basics
+{
+    class employeecs
+    {
+        string Emp_Name;
+        int Emp_id;
+        double basicSalary,netSalary;
+        public void getDetails()
+        {
+            Console.WriteLine("Enter Employee Name");
+            Emp_Name = Console.ReadLine();
+            Console.WriteLine("Enter Employee Id");
+            Emp_id = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Your Salary");
+            basicSalary = double.Parse(Console.ReadLine());
+            netSalary =basicSalary-( 0.1*(1000 + 5000 + basicSalary));
+            double taxDeducted = basicSalary - netSalary;
+            Console.WriteLine("Net Salary of"+Emp_Name+"is" + netSalary);
+            Console.WriteLine("Tax Deducted is" + taxDeducted);
+        }
+    }
+}
+
+
+
+
+
+
+// Program.cs
+
+
+
+using System;
+
+namespace C_sharp_basics
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            employeecs e1=new employeecs();
+            e1.getDetails();
+
+        }
+    }
+}
+
