@@ -1,0 +1,23 @@
+using System;
+
+namespace C_sharp_basics
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+Console.WriteLine("Enter electricity value");
+              int value1 = int.Parse(Console.ReadLine());
+              double results=1,charge1=6.95,charge2=5.95;
+              if(value1>100)
+              {
+                  results = value1*charge1 ;
+              }
+              else
+              {
+                  results = value1 * charge2;
+              }
+              Console.WriteLine("The reading is "+results);
+              }
+              }
+              }
